@@ -152,47 +152,29 @@ btnStop.addEventListener('click', function () {
 
 function nextBtn() {
 
+    arrayImg[activeItems].classList.remove('active');
+    sideArrayImg[activeItems].classList.remove('select');
+
     if (activeItems === arrayImg.length - 1) {
-        arrayImg[activeItems].classList.remove('active');
-        sideArrayImg[activeItems].classList.remove('select');
-
         activeItems = 0;
-
-        arrayImg[activeItems].classList.add('active');
-        sideArrayImg[activeItems].classList.add('select');
     } else {
-
-        arrayImg[activeItems].classList.remove('active');
-        sideArrayImg[activeItems].classList.remove('select');
-
         activeItems++;
-
-        arrayImg[activeItems].classList.add('active');
-        sideArrayImg[activeItems].classList.add('select');
     }
 
+    arrayImg[activeItems].classList.add('active');
+    sideArrayImg[activeItems].classList.add('select');
 };
 function beforeBtn() {
 
+    arrayImg[activeItems].classList.remove('active');
+    sideArrayImg[activeItems].classList.remove('select');
 
     if (activeItems === 0) {
-        arrayImg[activeItems].classList.remove('active');
-        sideArrayImg[activeItems].classList.remove('select');
-
         activeItems = arrayImg.length - 1;
-
-        arrayImg[activeItems].classList.add('active');
-        sideArrayImg[activeItems].classList.add('select');
     } else {
-
-        btnBefore.classList.remove('hidden')
-        arrayImg[activeItems].classList.remove('active');
-        sideArrayImg[activeItems].classList.remove('select');
-
         activeItems--;
-
-        arrayImg[activeItems].classList.add('active');
-        sideArrayImg[activeItems].classList.add('select');
     }
 
+    arrayImg[activeItems].classList.add('active');
+    sideArrayImg[activeItems].classList.add('select');
 };
