@@ -104,4 +104,14 @@ body{
     padding: 20px;
     font-size: 20px;
     border: 0;
+    color: white;
+}
+.btn-stop{
+    background-color: red;
+}
+.btn-reverse{
+    background: linear-gradient(0.25turn, #1ca442, #b8e533);
+}
+.btn-play{
+    background: linear-gradient(0.25turn, #b8e533, #1ca442 );
 }

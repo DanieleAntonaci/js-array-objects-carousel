@@ -118,19 +118,30 @@ btnBefore.addEventListener('click', beforeBtn);
 
 
 //  PICTURE CHANGE TIMER
+let activeBtn = true;
+
+
 // auto-play
 btnPlay.addEventListener('click', function () {
-    changePicture = setInterval(nextBtn, 3000);
+    if (activeBtn === true) {
+        activeBtn = false;
+        changePicture = setInterval(nextBtn, 3000);
+    }
 });
 
 // button reverse auto-play
 btnReverse.addEventListener('click', function () {
-    changePicture = setInterval(beforeBtn, 3000);
+    if (activeBtn === true) {
+        activeBtn = false;
+        changePicture = setInterval(beforeBtn, 3000);
+    }
 });
+
 
 // btn stop-auto-play
 btnStop.addEventListener('click', function () {
     clearInterval(changePicture);
+    activeBtn = true
 });
 
 
