@@ -36,7 +36,7 @@
     width: 250px;
     height: 100%;
     overflow: hidden;
-    object-position: 0 24%;
+    object-position: 0 35%;
     object-fit: cover;
 }
 
@@ -55,7 +55,7 @@
     text-align: right;
 }
 .box-img img{
-    object-position: 0 24%;
+    object-position: 0 35%;
     object-fit: cover;
     width: 950px;
     height: 409px;

@@ -106,7 +106,18 @@ arrayImg[0].classList.add('active');
 
 
 // button next
-btnAfter.addEventListener('click', function () {
+btnAfter.addEventListener('click', nextBtn);
+
+// button before
+btnBefore.addEventListener('click', beforeBtn);
+
+// timer picture change timer
+setInterval(nextBtn, 3000);
+
+
+// FUNCTION
+
+function nextBtn() {
 
     if (activeItems <= arrayImg.length - 1) {
         if (activeItems === arrayImg.length - 1) {
@@ -130,10 +141,8 @@ btnAfter.addEventListener('click', function () {
 
     }
 
-});
-
-// button before
-btnBefore.addEventListener('click', function () {
+};
+function beforeBtn() {
 
 
     if (activeItems >= 0) {
@@ -158,4 +167,4 @@ btnBefore.addEventListener('click', function () {
         }
     }
 
-})
+};
