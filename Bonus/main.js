@@ -38,6 +38,7 @@ let lateralImg = document.getElementById('lateral-img');
 let img = document.getElementsByClassName('box-img');
 let newImg;
 let newDiv;
+let lateralNewDiv;
 let divText;
 let h2Text;
 let pText;
@@ -75,15 +76,26 @@ images.forEach(element => {
 });
 
 // side image
-images.forEach(element => {
+images.forEach((element, index) => {
 
     newImg = document.createElement('img');
     newImg.src = element.image;
-    newDiv = document.createElement('div');
-    newDiv.classList.add('image-thumbnail');
-    newDiv.append(newImg);
-    lateralImg.append(newDiv);
-    sideArrayImg.push(newDiv)
+    lateralNewDiv = document.createElement('div');
+    lateralNewDiv.classList.add('image-thumbnail');
+    lateralNewDiv.append(newImg);
+    lateralImg.append(lateralNewDiv);
+    sideArrayImg.push(lateralNewDiv);
+
+    // btn img
+    lateralNewDiv.addEventListener('click', function () {
+        arrayImg[activeItems].classList.remove('active');
+        sideArrayImg[activeItems].classList.remove('select');
+
+        activeItems = index;
+
+        arrayImg[activeItems].classList.add('active');
+        sideArrayImg[activeItems].classList.add('select');
+    });
 });
 
 
