@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: floralwhite;
+}
 #container{
     position: relative;
     height: 409px;
     width: 1200px;
-    margin:250px auto;
+    margin:150px auto;
     display: flex;
     align-items: center;
 }
@@ -86,4 +89,19 @@
 }
 .btn.bottom{
     bottom: 20px;
+}
+
+/* BTN AUTO-PLAY */ 
+.auto-play{
+    display: flex;
+    justify-content: space-between;
+    
+
+    width: 600px;
+    margin: 70px auto;
+}
+.btn-auto {
+    padding: 20px;
+    font-size: 20px;
+    border: 0;
 }

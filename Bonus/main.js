@@ -30,6 +30,9 @@ const images = [
 // Altra versione di creazione dell' array attraverso append 
 let btnBefore = document.querySelector('.btn.top');
 let btnAfter = document.querySelector('.btn.bottom');
+let btnPlay = document.querySelector('.btn-auto.btn-play');
+let btnStop = document.querySelector('.btn-auto.btn-stop');
+let btnReverse = document.querySelector('.btn-auto.btn-reverse');
 let arrayImg = [];
 let sideArrayImg = [];
 let activeItems = 0;
@@ -42,6 +45,7 @@ let lateralNewDiv;
 let divText;
 let h2Text;
 let pText;
+let changePicture;
 
 
 // create div for image
@@ -111,8 +115,26 @@ btnAfter.addEventListener('click', nextBtn);
 // button before
 btnBefore.addEventListener('click', beforeBtn);
 
-// timer picture change timer
-setInterval(nextBtn, 3000);
+
+
+//  PICTURE CHANGE TIMER
+// auto-play
+btnPlay.addEventListener('click', function () {
+    changePicture = setInterval(nextBtn, 3000);
+});
+
+// button reverse auto-play
+btnReverse.addEventListener('click', function () {
+    changePicture = setInterval(beforeBtn, 3000);
+});
+
+// btn stop-auto-play
+btnStop.addEventListener('click', function () {
+    clearInterval(changePicture);
+});
+
+
+
 
 
 // FUNCTION
